@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Air Play</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/null.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/colors.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/map.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+    <div class="login">
+        <div class="login-menu">
+            <p>Please enter your name!</p>
+            <input class="login-input">
+            <button class="login-button">Start Game</button>
+        </div>
+        <div class="win-menu" style="display: none;">
+            <p>You won!</p>
+        </div>
+    </div>
+    <div id="map">
+        <script src="{{ url_for('static', path='/js/main.js') }}"></script>
+        <div class="control-panel">
+            <div class="control-panel-stats">
+                <p class="money">💰Money: 0</p>
+                <p class="fuel">🔥Fuel: 0/100</p>
+                <p class="name">🧑‍✈️Name: None</p>
+            </div>
+            <div class="control-panel-fly">
+                <button class="buy-button">Buy</button>
+                <span class="fuel-price">Fuel price in None: 0$ per unit</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
